@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>About us</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">CineMille</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="container">
+<h1>Aboout CineMille</h1>
+<h3 style="color:white">Il cinema CineMille è un esercizio storico dell'area fiorentina, nonché uno dei più grandi presenti in Toscana.
+Dispone di 12 sale di proiezione, di cui 2 in tecnologia IMAX.Le sale hanno una capienza differente, con le più grandi che 
+dispongono di 250 posti ciascuna fino alle più piccole da circa 50 posti a sedere.
+</h3>
+<button id="toggleButton">We are here</button>
+<div id="content" style="display:none;">
+  <h3 style="color:white"> You can find usa here in via Roma a Firenze (FI).</h3>
+  <img alt="mappa" src="maps.png">
+</div>
+
+</div>
+
+</body>
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const contentDiv = document.getElementById('content');
+
+  toggleButton.addEventListener('click', () => {
+    if (contentDiv.style.display === 'none') {
+      contentDiv.style.display = 'block';
+      toggleButton.textContent = 'Close';
+    } else {
+      contentDiv.style.display = 'none';
+      toggleButton.textContent = 'We are here';
+    }
+  });
+</script>
+</html>
