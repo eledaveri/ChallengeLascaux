@@ -8,18 +8,18 @@
   <script src="bootstrap.min.js"></script>
 </head>
 <body>
-		<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">CineMille</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="Home.html">Home</a>
-      </li>
-      <li class="nav-item">
+	<header>
+    	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="Home.html">CineMille</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item active">
+         <a class="nav-link" href="Home.html">Home</a>
+       </li>
+       <li class="nav-item">
         <a class="nav-link" href="About.html">About</a>
       </li>
     </ul>
@@ -54,27 +54,24 @@ function getPastFilms(){
 	fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=eac42e1fe4c71285a359d53d21ad1711')
 	.then(response => response.json())
 	.then(data =>  {  
-				console.log(data);
-				console.log(data.dates);
-			    const film = document.getElementById('films');
-			    //const dateHeading = document.createElement('p');
-			    //dateHeading.textContent = `Those films will be available from ${data.dates.minimum} to ${data.dates.maximum}`;
-			    //films.after(dateHeading);
-	    const filmsList = document.getElementById('past-films-list');
-	    data.results.forEach(film => {
+		console.log(data);
+		console.log(data.dates);
+	    const film = document.getElementById('films');
+  		const filmsList = document.getElementById('past-films-list');
+	   	data.results.forEach(film => {
 	    	let today = new Date();
 	    	let releaseDate = new Date(film.release_date);
 	    	let lastDay = new Date(film.release_date);
 	    	lastDay.setDate(releaseDate.getDate() +21);
 	    	if(lastDay<today){
-	      const filmRow = document.createElement('tr');
-	      filmRow.innerHTML = `
-	        <td>${film.title}</td>
-	        <td>${film.release_date}</td>
-	        <td>${film.vote_average}</td>
-	        <td><a href="FilmDetail.html?filmId=${film.id}"><button>Details</button></a></td>
-	      `;
-	      filmsList.appendChild(filmRow);
+	      		const filmRow = document.createElement('tr');
+	      		filmRow.innerHTML = `
+	        	<td>${film.title}</td>
+	        	<td>${film.release_date}</td>
+	        	<td>${film.vote_average}</td>
+	        	<td><a href="FilmDetail.html?filmId=${film.id}"><button>Details</button></a></td>
+	      		`;
+	      		filmsList.appendChild(filmRow);
 	    	}
 	    });
 	})

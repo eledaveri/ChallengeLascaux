@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-/* Imposta il colore di sfondo della pagina */
 body {
     background-image: url("sfondo.jpg");
   background-repeat: no-repeat;
@@ -12,8 +11,6 @@ body {
   font-weight: bold;
 }
 
-
-/* Aggiungi un po' di spazio extra intorno ai contenitori */
 .container {
   padding: 20px;
   margin: 20px auto;
@@ -22,29 +19,24 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Imposta il colore del testo dell'intestazione */
 header {
   color: #333;
 }
 
-/* Imposta lo stile della barra di navigazione */
 .navbar {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Imposta il colore dei link nella barra di navigazione */
 .navbar a {
   color: #333;
 }
 
-/* Aggiungi uno stile di hover ai link nella barra di navigazione */
 .navbar a:hover {
   color: #666;
 }
 
-/* Imposta lo stile del pulsante "View Past Films" */
 button {
   background-color: #333;
   color: #fff;
@@ -58,28 +50,23 @@ h1 {
 	color:red;
 }
 
-/* Aggiungi uno stile di hover al pulsante "View Past Films" */
 button:hover {
   background-color: #666;
 }
 
-/* Imposta lo stile delle tabelle */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Imposta il colore di sfondo delle righe dispari nelle tabelle */
 table tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
-/* Imposta il colore di sfondo delle righe pari nelle tabelle */
 table tr:nth-child(even) {
   background-color: #fff;
 }
 
-/* Imposta lo stile delle intestazioni di colonna nelle tabelle */
 table th {
   background-color: #333;
   color: #333;
@@ -87,12 +74,10 @@ table th {
   padding: 10px;
 }
 
-/* Imposta lo stile delle celle nelle tabelle */
 table td {
   padding: 10px;
 }
 
-/* Aggiungi uno stile di hover alle celle delle tabelle */
 table td:hover {
   background-color: #f2f2f2;
 }
